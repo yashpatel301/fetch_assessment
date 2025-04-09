@@ -46,5 +46,7 @@ Changes:
 
 **Task 4**
 ```
-
+Key notes
+    -> The model handles hypothetical data by manually constructing token-label pairs and ensuring label padding matches the tokenized sequence length, preventing shape mismatches during training. 
+    -> The forward pass uses a shared BERT encoder with separate task-specific heads selected dynamically based on the current task. Metrics are calculated per task, using standard accuracy for classification and masked token-level accuracy for NER to exclude padding effects.
 ```
